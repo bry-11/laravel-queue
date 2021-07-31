@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  api-lara:
+    container_name: api-lara
+    restart: always
+    build:
+      context: .
+    ports:
+      - 8500:80
+    volumes:
+      - ./:/var/www/html
+      - /var/www/html/vendor
